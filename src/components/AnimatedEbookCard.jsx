@@ -10,7 +10,7 @@ const AnimatedEbookCard = ({ book, index }) => {
 
   const handleBuyBook = (book) => {
     console.log(`Redirecting to Amazon for: ${book.title}`);
-    window.open('https://amazon.com', '_blank');
+    window.open(book.amazonLink, '_blank');
   };
 
   const handlePreview = (book) => {

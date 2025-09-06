@@ -17,9 +17,9 @@ const EbooksSection = () => {
           ref={headerRef}
           className={`section-header animate-on-scroll fade-in ${isHeaderVisible ? 'is-visible' : ''}`}>
           <span className="section-badge">Libros & Ebooks</span>
-          <h2 className="section-title">Recursos Inspiracionales</h2>
+          <h2 className="section-title">Mis Ebooks en Amazon.com</h2>
           <p className="section-description">
-            Descarga contenido inspirador que transformará tu perspectiva y fortalecerá tu familia
+            Adquiere contenido inspirador que transformará tu perspectiva y fortalecerá tu familia
           </p>
         </div>
         

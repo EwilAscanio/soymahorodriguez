@@ -1,17 +1,25 @@
 // Mock data for Maho Rodríguez Landing Page
+import MahoHero from "../public/images/mahohero.png";
+import MahoAbout from "../public/images/imageSobreMi.png";
+import Ebooks21Consejos from "../public/images/Ebooks21consejos.jpg";
+import EbooksUnMundoAventuras from "../public/images/EbooksUnmundo.jpg";
+import EbooksCuentos from "../public/images/EbooksCuentos.jpg";
+
 
 export const heroData = {
   title: "Transforma tu vida, descubre tu potencial",
   subtitle: "Soy Maho Rodríguez, coach especializada en desarrollo personal y empoderamiento femenino. Te acompaño en tu journey hacia la mejor versión de ti misma.",
   ctaText: "Comienza tu transformación",
-  profileImage: "https://images.unsplash.com/photo-1557555187-23d685287bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+  profileImage: MahoHero,
+  //profileImage: "https://images.unsplash.com/photo-1557555187-23d685287bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 };
 
 export const aboutData = {
   title: "Sobre Mí",
   description: "Hola, soy Maho Rodríguez, una apasionada del crecimiento personal y el empoderamiento femenino. Con más de 5 años de experiencia ayudando a mujeres a descubrir su potencial, creo firmemente que cada una de nosotras tiene el poder de crear la vida que desea.",
   mission: "Mi misión es acompañarte en tu proceso de autoconocimiento y transformación personal, brindándote las herramientas necesarias para que puedas alcanzar tus metas y vivir una vida plena y auténtica.",
-  image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+  image: MahoAbout
+  //image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
 };
 
 export const servicesData = [
@@ -108,9 +116,10 @@ export const ebooksData = [
     title: "21 Consejos en Tiempos de Dificultad",
     description: "En medio de la espera de los resultados de una biopsia en mi seno, El Espíritu Santo me movió a compartir un consejo diariamente. Este es el resultado de ese desafío del Señor. Hoy te animo a cambiar la estrategia en medio del dolor y la espera.",
     category: "Desarrollo Personal",
-    price: "Gratuito",
-    amazonLink: "https://amazon.com/dp/ebook1", // Placeholder link
-    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    //price: "Gratuito",
+    price: "$13 USD",
+    amazonLink: "https://www.amazon.com/CONSEJOS-PARA-TIEMPOS-DIFICULTAD-FILIPENSES-ebook/dp/B0FLVS33L6/ref=sr_1_1?sr=8-1", // Placeholder link
+    image: Ebooks21Consejos,
     features: ["21 consejos inspiradores", "Experiencias reales", "Guía durante momentos difíciles", "Formato digital"]
   },
   {
@@ -118,9 +127,9 @@ export const ebooksData = [
     title: "Un Mundo de Aventuras Bíblicas",
     description: "Devocionales infantiles que le brindarán a los pequeños de la casa una auténtica experiencia con Dios. Más que historias, este ebook te desafía a vivir con tus hijos momentos inolvidables.",
     category: "Familia & Niños",
-    price: "$9.99 USD",
-    amazonLink: "https://amazon.com/dp/ebook2", // Placeholder link
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1428&q=80",
+    price: "$10 USD",
+    amazonLink: "https://www.amazon.com/Mundo-Aventuras-B%C3%ADblicas-Vol-Historias-ebook/dp/B0FLG9Y13C/ref=sr_1_2?sr=8-2", // Placeholder link
+    image: EbooksUnMundoAventuras,
     features: ["Devocionales diarios", "Actividades familiares", "Valores cristianos", "Momentos de conexión"]
   },
   {
@@ -128,9 +137,9 @@ export const ebooksData = [
     title: "Un Mundo de Aventuras - Cuentos Infantiles",
     description: "Con el propósito de fomentar valores y principios en los pequeños de casa, estos 6 personajes atraviesan circunstancias que los desafían a ser valientes, respetuosos y salir de los problemas trabajando en equipo.",
     category: "Cuentos Infantiles",
-    price: "$12.99 USD",
-    amazonLink: "https://amazon.com/dp/ebook3", // Placeholder link
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    price: "$12 USD",
+    amazonLink: "https://www.amazon.com/Mundo-Aventuras-Cuentos-Infantiles-Spanish-ebook/dp/B0FLG5S77F/ref=sr_1_1?sr=8-1", // Placeholder link
+    image: EbooksCuentos,
     features: ["6 personajes únicos", "Valores y principios", "Trabajo en equipo", "Aventuras emocionantes"]
   }
 ];
