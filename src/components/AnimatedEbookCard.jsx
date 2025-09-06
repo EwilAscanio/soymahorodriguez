@@ -9,6 +9,7 @@ const AnimatedEbookCard = ({ book, index }) => {
   const [cardRef, isCardVisible] = useIntersectionObserver({ threshold: 0.1, delay: index * 150 });
 
   const handleBuyBook = (book) => {
+    // Redirect to the Amazon link for the book
     console.log(`Redirecting to Amazon for: ${book.title}`);
     window.open(book.amazonLink, '_blank');
   };
