@@ -146,6 +146,6 @@ export const ebooksData = [
 
 export const contactInfo = {
   email: "hola@soymahorodriguez.com",
-  phone: "+1 (555) 123-4567",
-  location: "Ciudad de México, México"
+  phone: "+58 (414) 4053277 ",
+  location: "Ciudad de Valencia, Venezuela"
 };

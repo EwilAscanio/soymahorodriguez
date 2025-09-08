@@ -51,8 +51,7 @@ const ContactSection = () => {
         name: "",
         email: "",
         phone: "",
-        message: "",
-        service: ""
+        message: ""
       });
     } catch (error) {
       toast({
@@ -66,60 +65,65 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="contact-section">
-      <div className="contact-container">
+    <section id="contact" className="py-24 px-8 bg-white">
+      <div className="max-w-screen-xl mx-auto">
         <div 
           ref={headerRef}
-          className={`section-header animate-on-scroll fade-in ${isHeaderVisible ? 'is-visible' : ''}`}>
-          <span className="section-badge">Contacto</span>
-          <h2 className="section-title">¿Lista para transformar tu vida?</h2>
-          <p className="section-description">
+          className={`text-center mb-16 animate-on-scroll fade-in ${isHeaderVisible ? 'is-visible' : ''}`}>
+          <span className="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-pink-300">Contacto</span>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 to-pink-500 bg-clip-text text-transparent">¿Lista para transformar tu vida?</h2>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Agenda tu llamada gratuita de 20 minutos y comencemos juntas este hermoso camino
           </p>
         </div>
         
-        <div className="contact-content">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-16 items-start">
           <div 
             ref={infoRef}
-            className={`contact-info animate-on-scroll slide-in-from-left ${isInfoVisible ? 'is-visible' : ''}`}>
-            <Card className="info-card">
+            className={`sticky top-8 animate-on-scroll slide-in-from-left ${isInfoVisible ? 'is-visible' : ''}`}>
+            <Card className="bg-[linear-gradient(135deg,_#FCE7F3_0%,_#FFFFFF_100%)] border border-pink-500/10 rounded-3xl">
               <CardHeader>
-                <CardTitle className="info-title">
-                  <Heart className="title-icon" />
+                <CardTitle className="flex items-center gap-3 text-2xl text-gray-800">
+                  <Heart className="text-pink-600" />
                   Hablemos
                 </CardTitle>
               </CardHeader>
-              <CardContent className="info-content">
-                <div className="contact-methods">
-                  <div className="contact-method">
-                    <Mail className="method-icon" />
-                    <div className="method-details">
-                      <span className="method-label">Email</span>
-                      <span className="method-value">{contactInfo.email}</span>
+              <CardContent className="pt-0">
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 py-4 border-b border-pink-500/10">
+                    <div className="w-10 h-10 bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                      <Mail />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm text-gray-500 font-medium">Email</span>
+                      <span className="text-base text-gray-800 font-semibold">{contactInfo.email}</span>
                     </div>
                   </div>
                   
-                  <div className="contact-method">
-                    <Phone className="method-icon" />
-                    <div className="method-details">
-                      <span className="method-label">Teléfono</span>
-                      <span className="method-value">{contactInfo.phone}</span>
+                  <div className="flex items-center gap-4 py-4 border-b border-pink-500/10">
+                    <div className="w-10 h-10 bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                      <Phone />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm text-gray-500 font-medium">Teléfono</span>
+                      <span className="text-base text-gray-800 font-semibold">{contactInfo.phone}</span>
                     </div>
                   </div>
                   
-                  <div className="contact-method">
-                    <MapPin className="method-icon" />
-                    <div className="method-details">
-                      <span className="method-label">Ubicación</span>
-                      <span className="method-value">{contactInfo.location}</span>
+                  <div className="flex items-center gap-4 py-4">
+                    <div className="w-10 h-10 bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                      <MapPin />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm text-gray-500 font-medium">Ubicación</span>
+                      <span className="text-base text-gray-800 font-semibold">{contactInfo.location}</span>
                     </div>
                   </div>
                 </div>
                 
-                <div className="info-message">
-                  <p>
-                    Estoy aquí para escucharte y acompañarte en tu proceso de transformación. 
-                    Cada mujer merece vivir su mejor vida, y juntas podemos lograrlo.
+                <div className="p-6 bg-pink-500/5 rounded-xl border-l-4 border-pink-600">
+                  <p className="text-sm text-gray-700 leading-relaxed m-0 italic">
+                  Estoy aquí para contarte historias que te inspiren a vivir tu fe y a descubrir tu propósito. Cada mujer merece vivir su mejor vida, y a través de mis palabras, te acompañaré en ese camino.
                   </p>
                 </div>
               </CardContent>
@@ -128,20 +132,20 @@ const ContactSection = () => {
           
           <div 
             ref={formRef}
-            className={`contact-form-wrapper animate-on-scroll slide-in-from-right ${isFormVisible ? 'is-visible' : ''}`}>
-            <Card className="contact-form-card">
+            className={`relative animate-on-scroll slide-in-from-right ${isFormVisible ? 'is-visible' : ''}`}>
+            <Card className="bg-white border border-pink-500/10 rounded-3xl shadow-sm">
               <CardHeader>
-                <CardTitle className="form-title">Agenda tu llamada gratuita</CardTitle>
-                <p className="form-description">
+                <CardTitle className="text-3xl text-gray-800 mb-2">Contactame</CardTitle>
+                <p className="text-gray-500 text-base m-0">
                   Cuéntame un poco sobre ti y tus objetivos
                 </p>
               </CardHeader>
               
               <CardContent>
-                <form onSubmit={handleSubmit} className="contact-form">
-                  <div className="form-row">
-                    <div className="form-field">
-                      <Label htmlFor="name">Nombre completo *</Label>
+                <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-2">
+                      <Label htmlFor="name" className="font-medium text-gray-800 text-sm">Nombre completo *</Label>
                       <Input
                         id="name"
                         name="name"
@@ -150,11 +154,12 @@ const ContactSection = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Tu nombre completo"
+                        className="p-3 border-2 border-pink-500/20 rounded-xl text-base transition-all duration-200 bg-white focus:outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-500/10"
                       />
                     </div>
                     
-                    <div className="form-field">
-                      <Label htmlFor="email">Email *</Label>
+                    <div className="flex flex-col gap-2">
+                      <Label htmlFor="email" className="font-medium text-gray-800 text-sm">Email *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -163,43 +168,30 @@ const ContactSection = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="tu@email.com"
+                        className="p-3 border-2 border-pink-500/20 rounded-xl text-base transition-all duration-200 bg-white focus:outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-500/10"
                       />
                     </div>
                   </div>
                   
-                  <div className="form-row">
-                    <div className="form-field">
-                      <Label htmlFor="phone">Teléfono</Label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-2">
+                      <Label htmlFor="phone" className="font-medium text-gray-800 text-sm">Teléfono</Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="(0414) 123-4567"
+                        className="p-3 border-2 border-pink-500/20 rounded-xl text-base transition-all duration-200 bg-white focus:outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-500/10"
                       />
                     </div>
                     
-                    <div className="form-field">
-                      <Label htmlFor="service">Servicio de interés</Label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        className="service-select"
-                      >
-                        <option value="">Selecciona un servicio</option>
-                        <option value="coaching-individual">Coaching Individual</option>
-                        <option value="programa-empoderamiento">Programa Empoderamiento</option>
-                        <option value="mentoria-empresarial">Mentoría Empresarial</option>
-                        <option value="no-segura">No estoy segura</option>
-                      </select>
-                    </div>
+                   
                   </div>
                   
-                  <div className="form-field">
-                    <Label htmlFor="message">Cuéntame sobre ti *</Label>
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="message" className="font-medium text-gray-800 text-sm">Cuéntame sobre ti *</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -208,13 +200,14 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="Cuéntame un poco sobre tu situación actual y qué te gustaría lograr..."
                       rows={4}
+                      className="p-3 border-2 border-pink-500/20 rounded-xl text-base transition-all duration-200 bg-white focus:outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-500/10"
                     />
                   </div>
                   
                   <Button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="submit-button"
+                    className="bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] text-white border-none px-8 py-4 rounded-full font-semibold text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
                     size="lg"
                   >
                     {isSubmitting ? "Enviando..." : "Enviar mensaje"}

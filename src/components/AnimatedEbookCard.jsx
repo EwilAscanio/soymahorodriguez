@@ -20,17 +20,17 @@ const AnimatedEbookCard = ({ book, index }) => {
 
   return (
     <div ref={cardRef} className={`animate-on-scroll fade-in ${isCardVisible ? 'is-visible' : ''}`}>
-      <Card className="ebook-card">
-        <div className="ebook-image-container">
+      <Card className="group bg-white border border-pink-500/10 rounded-3xl overflow-hidden transition-all duration-300 shadow-sm hover:-translate-y-3 hover:shadow-lg hover:border-pink-300">
+        <div className="relative w-full h-72 overflow-hidden bg-[linear-gradient(135deg,_#FCE7F3_0%,_#FFFFFF_100%)]">
           <img 
             src={book.image} 
             alt={book.title}
-            className="ebook-image"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div className="ebook-overlay">
+          <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <Button 
               onClick={() => handlePreview(book)}
-              className="preview-button"
+              className="bg-white text-pink-600 border-2 border-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition-transform duration-200 hover:scale-105 hover:bg-pink-600 hover:text-white"
               size="sm"
               variant="outline"
             >
@@ -38,25 +38,25 @@ const AnimatedEbookCard = ({ book, index }) => {
               Vista Previa
             </Button>
           </div>
-          <Badge className="ebook-category-badge">
+          <Badge className="absolute top-4 right-4 bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] text-white border-none px-4 py-2 rounded-full text-xs font-semibold shadow-sm">
             {book.category}
           </Badge>
         </div>
         
-        <CardHeader className="ebook-header">
-          <div className="ebook-rating">
+        <CardHeader className="p-6 pb-4">
+          <div className="flex items-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} size={14} className="star filled" />
+              <Star key={i} size={14} className="text-yellow-400" />
             ))}
-            <span className="rating-text">(4.8)</span>
+            <span className="text-sm text-gray-500 ml-2 font-medium">(4.8)</span>
           </div>
           
-          <CardTitle className="ebook-title">{book.title}</CardTitle>
+          <CardTitle className="text-xl font-bold text-gray-800 leading-tight mb-4 line-clamp-2">{book.title}</CardTitle>
           
-          <div className="ebook-price-container">
-            <span className="ebook-price">{book.price}</span>
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <span className="text-2xl font-extrabold text-pink-600">{book.price}</span>
             {book.price === "Gratuito" && (
-              <Badge variant="secondary" className="free-badge">
+              <Badge variant="secondary" className="bg-pink-100 text-pink-700 border border-pink-300 flex items-center gap-1 text-xs font-semibold">
                 <Download size={12} />
                 Descarga Gratis
               </Badge>
@@ -64,36 +64,36 @@ const AnimatedEbookCard = ({ book, index }) => {
           </div>
         </CardHeader>
         
-        <CardContent className="ebook-content">
-          <p className="ebook-description">{book.description}</p>
+        <CardContent className="p-6 pt-0">
+          <p className="text-sm text-gray-600 leading-relaxed mb-6 line-clamp-4">{book.description}</p>
           
-          <div className="ebook-features">
-            <h4 className="features-title">¿Qué incluye?</h4>
-            <ul className="features-list">
+          <div className="bg-[linear-gradient(135deg,_#FCE7F3_0%,_#FFFFFF_100%)] p-6 rounded-2xl mb-6 border border-pink-500/10">
+            <h4 className="text-base font-semibold text-gray-800 mb-4">¿Qué incluye?</h4>
+            <ul className="space-y-3">
               {book.features.map((feature, index) => (
-                <li key={index} className="feature-item">
-                  <span className="feature-bullet">✨</span>
+                <li key={index} className="flex items-center gap-3 text-sm text-gray-700">
+                  <span className="text-lg text-pink-600 flex-shrink-0">✨</span>
                   {feature}
                 </li>
               ))}
             </ul>
           </div>
           
-          <div className="ebook-actions">
+          <div className="flex flex-col gap-3">
             <Button 
               onClick={() => handleBuyBook(book)}
-              className="buy-button"
+              className="group bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] text-white border-none px-6 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:-translate-y-0.5 hover:shadow-lg"
               size="lg"
             >
               <ShoppingCart size={16} />
               {book.price === "Gratuito" ? "Descargar Gratis" : "Comprar en Amazon"}
-              <ExternalLink size={14} className="external-icon" />
+              <ExternalLink size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
             
             <Button 
               onClick={() => handlePreview(book)}
               variant="outline"
-              className="preview-button-secondary"
+              className="border-2 border-pink-300 text-pink-600 bg-transparent px-6 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-pink-100 hover:border-pink-600 hover:-translate-y-0.5"
               size="lg"
             >
               <Book size={16} />
