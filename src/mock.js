@@ -1,5 +1,5 @@
 // Mock data for Maho Rodríguez Landing Page
-import MahoHero from "../public/images/mahohero.png";
+import MahoHero from "../public/images/mahohero.jpg";
 import MahoAbout from "../public/images/imageSobreMi.png";
 import Ebooks21Consejos from "../public/images/Ebooks21consejos.jpg";
 import EbooksUnMundoAventuras from "../public/images/EbooksUnmundo.jpg";
