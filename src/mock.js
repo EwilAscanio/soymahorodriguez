@@ -7,17 +7,17 @@ import EbooksCuentos from "../public/images/EbooksCuentos.jpg";
 
 
 export const heroData = {
-  title: "Transforma tu vida, descubre tu potencial",
-  subtitle: "Soy Maho Rodríguez, coach especializada en desarrollo personal y empoderamiento femenino. Te acompaño en tu journey hacia la mejor versión de ti misma.",
-  ctaText: "Comienza tu transformación",
+  title: "Mujeres de Fe y Proposito, Crezcamos Juntas",
+  subtitle: "Soy Maho Rodríguez, con más de 20 años contando historias que reflejan su fe. Ahora, su pasión por el teatro se expande a la escritura, compartiendo su propio camino de vida a través de su primer e-book.",
+  ctaText: "Contactame",
   profileImage: MahoHero,
   //profileImage: "https://images.unsplash.com/photo-1557555187-23d685287bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 };
 
 export const aboutData = {
   title: "Sobre Mí",
-  description: "Hola, soy Maho Rodríguez, una apasionada del crecimiento personal y el empoderamiento femenino. Con más de 5 años de experiencia ayudando a mujeres a descubrir su potencial, creo firmemente que cada una de nosotras tiene el poder de crear la vida que desea.",
-  mission: "Mi misión es acompañarte en tu proceso de autoconocimiento y transformación personal, brindándote las herramientas necesarias para que puedas alcanzar tus metas y vivir una vida plena y auténtica.",
+  description: "Maholy Rodríguez es comunicadora, directora teatral y escritora con más de 20 años de experiencia. Su pasión por contar historias, un reflejo de su profunda fe, la ha llevado a expandir su vocación al mundo de la escritura. Su vida personal, marcada por su rol como esposa y madre, y por los desafíos que ha superado —como la enfermedad de su hija y la experiencia de ser migrante—, le ha brindado una gran empatía y sabiduría. Su mayor deseo es que sus escritos inspiren y ofrezcan herramientas a quienes buscan superar los retos de la vida.",
+  mission: "Mi mision es inspirar a través de historias que fortalezcan la fe y ofrezcan herramientas prácticas para enfrentar los desafíos de la vida, transformando los tiempos de espera en oportunidades de crecimiento personal.",
   image: MahoAbout
   //image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
 };

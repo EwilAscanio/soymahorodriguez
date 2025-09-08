@@ -12,23 +12,27 @@ const AboutSection = () => {
     {
       icon: Heart,
       title: "Empatía",
-      description: "Cada mujer es única y merece ser escuchada con comprensión y respeto."
+      description: "Cada mujer es única y merece ser comprendida."
     },
     {
       icon: Target,
       title: "Propósito",
-      description: "Te ayudo a descubrir y perseguir tu propósito de vida auténtico."
+      description: "Te ayudo a descubrir tu propósito de vida."
     },
     {
       icon: Award,
       title: "Excelencia",
-      description: "Compromiso con la calidad y resultados transformadores reales."
+      description: "Comprometida con la calidad y resultados reales."
     }
   ];
 
   return (
     <section id="about" className="about-section">
       <div className="about-container">
+        <div className="section-header text-center mb-12">
+          <span className="section-badge">Sobre Mí</span>
+          <h2 className="section-title">{aboutData.title}</h2>
+        </div>
         <div className="about-content">
           <div 
             ref={imageRef}
@@ -46,20 +50,15 @@ const AboutSection = () => {
           <div 
             ref={textRef}
             className={`about-text animate-on-scroll slide-in-from-right ${isTextVisible ? 'is-visible' : ''}`}>
-            <div className="section-header">
-              <span className="section-badge">Sobre Mí</span>
-              <h2 className="section-title">{aboutData.title}</h2>
-            </div>
-            
             <p className="about-description">
               {aboutData.description}
             </p>
             
-            <p className="about-mission">
+            <p className="about-mission ">
               {aboutData.mission}
             </p>
             
-            <div className="values-grid">
+            <div className="mt-8 grid grid-cols-3 gap-4 text-center">
               {values.map((value, index) => (
                 <AnimatedCard key={index} value={value} index={index} />
               ))}

@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="hero-text">
             <div className="hero-badge animate-on-load delay-1">
               <Sparkles className="sparkles-icon" />
-              <span>Coaching & Desarrollo Personal</span>
+              <span>Comunicadora y Directora Teatral de Corazon</span>
             </div>
             
             <h1 className="hero-title animate-on-load delay-2">
