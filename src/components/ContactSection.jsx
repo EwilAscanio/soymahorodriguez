@@ -44,12 +44,13 @@ const ContactSection = () => {
     const publicKey = 'z1oE1xyE07gj9BSWY';
 
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
+      name: formData.name,
+      email: formData.email,
       to_name: 'Maho Rodriguez', // Puedes cambiar esto
       message: formData.message,
       phone: formData.phone,
     };
+    console.log("Enviando con estos parámetros:", templateParams);
     // --------------------------------
 
     try {
