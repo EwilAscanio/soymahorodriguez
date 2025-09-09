@@ -149,3 +149,73 @@ export const contactInfo = {
   phone: "+58 (414) 4053277 ",
   location: "Ciudad de Valencia, Venezuela"
 };
+
+export const freeGuidesData = [
+  {
+    id: 1,
+    title: "5 Ideas para promover tiempos de calidad con tus hijos",
+    description: "El mayor desafío de los padres hoy en día es poder disponer de tiempo de calidad con sus hijos, la actividades y preocupaciones diarias pueden bloquear nuestra creatividad. Hoy quiero regalarte esta guía práctica para que despiertes nuevamente esa chispa y comiences a disfrutar tiempos en familias..",
+    image: "/images/guia-fe.jpg", // Placeholder image
+    fileUrl: "/guides/guia-fe.pdf", // Placeholder file
+    isAvailable: true,
+  },
+  {
+    id: 2,
+    title: "Potencia tus devocionales",
+    description: "Para muchas disfrutar el tiempo con Dios es una tarea que no resulta tan fácil, aprender a potenciar tus devocionales te ayudará a disfrutar y sacar el mayor provecho a tus tiempos con Dios. No te desanimes..",
+    image: "/images/guia-sanidad.jpg", // Placeholder image
+    fileUrl: null,
+    isAvailable: false,
+  },
+];
+
+export const youtubeVideosData = [
+  {
+    id: 1,
+    title: "Mi testimonio",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    description: "Un relato personal sobre mi camino de fe y superación.",
+    duration: "12:34",
+    category: "Testimonio",
+    date: "2023-01-15",
+    views: 15000,
+  },
+  {
+    id: 2,
+    title: "Sanando el corazón",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    description: "Consejos prácticos para encontrar sanidad emocional y espiritual.",
+    duration: "08:20",
+    category: "Crecimiento Personal",
+    date: "2023-02-20",
+    views: 8500,
+  },
+  {
+    id: 3,
+    title: "El poder de la oración",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    description: "Descubre cómo la oración puede transformar tu vida y tus circunstancias.",
+    duration: "10:05",
+    category: "Fe",
+    date: "2023-03-10",
+    views: 22000,
+  },
+  {
+    id: 4,
+    title: "Vivir en propósito",
+    videoId: "dQw4w9WgXcQ",
+    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    description: "Encuentra tu propósito de vida y vive con intención cada día.",
+    duration: "07:45",
+    category: "Desarrollo Personal",
+    date: "2023-04-01",
+    views: 11200,
+  },
+];

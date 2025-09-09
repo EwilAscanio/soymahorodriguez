@@ -29,6 +29,8 @@ const Header = () => {
     //{ name: "Testimonios", id: "testimonials" },
     { name: "Ebooks", id: "ebooks" },
     { name: "Libros", id: "printed-books" },
+    { name: "Guías", id: "free-guides" },
+    { name: "YouTube", id: "youtube" },
     //{ name: "Blog", id: "blog" },
     { name: "Contacto", id: "contact" }
   ];

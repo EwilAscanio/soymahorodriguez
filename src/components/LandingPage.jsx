@@ -10,6 +10,8 @@ import BlogSection from "./BlogSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
+import FreeGuidesSection from "./FreeGuidesSection";
+import YouTubeSection from "./YouTubeSection";
 
 const LandingPage = () => {
   return (
@@ -20,6 +22,8 @@ const LandingPage = () => {
         <AboutSection />
         <EbooksSection />
         <PrintedBooksSection />
+        <FreeGuidesSection />
+        <YouTubeSection />
         <ContactSection />
         
         {/* <TestimonialsSection />

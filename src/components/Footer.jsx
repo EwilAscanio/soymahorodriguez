@@ -41,13 +41,10 @@ const Footer = () => {
                 <ul className="flex flex-col gap-3">
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" })}>Inicio</button></li>
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}>Sobre Mí</button></li>
-                 
-                  
-                 
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("ebooks")?.scrollIntoView({ behavior: "smooth" })}>Ebooks</button></li>
-                  
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("printed-books")?.scrollIntoView({ behavior: "smooth" })}>Libros</button></li>
-              
+                  <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("free-guides")?.scrollIntoView({ behavior: "smooth" })}>Guías</button></li>
+                  <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("youtube")?.scrollIntoView({ behavior: "smooth" })}>YouTube</button></li>
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>Contacto</button></li>
                 </ul>
                 
@@ -104,11 +101,16 @@ const Footer = () => {
         
         <div className="flex justify-between items-center pt-8 border-t border-white/10">
           <div className="flex flex-col gap-2">
-            <p className="text-sm text-gray-400 m-0">© 2024 Maho Rodríguez. Todos los derechos reservados.</p>
+            <p className="text-sm text-gray-400 m-0">© 2025 Desarrollado por 
+              <a href="http://ewilascanio.com" target="_blank" rel="noopener noreferrer" className="text-pink-300 underline">
+              ewilascanio.com
+              </a> - Todos derechos reservados.</p>
             <p className="flex items-center gap-2 text-sm text-gray-400 m-0">
-              Hecho con <Heart size={14} className="text-pink-500 animate-pulse" /> para mujeres empoderadas
+              Hecho con <Heart size={14} className="text-pink-500 animate-pulse" /> para mujeres.
             </p>
           </div>
+          
+          
           
           <Button 
             onClick={scrollToTop}
