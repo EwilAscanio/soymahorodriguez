@@ -9,6 +9,7 @@ import PrintedBooksSection from "./PrintedBooksSection";
 import BlogSection from "./BlogSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
+import WhatsAppButton from "./WhatsAppButton";
 
 const LandingPage = () => {
   return (
@@ -27,6 +28,7 @@ const LandingPage = () => {
        */}
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

@@ -50,8 +50,6 @@ const ContactSection = () => {
       message: formData.message,
       phone: formData.phone,
     };
-    console.log("Enviando con estos parámetros:", templateParams);
-    // --------------------------------
 
     try {
       await emailjs.send(serviceID, templateID, templateParams, publicKey);

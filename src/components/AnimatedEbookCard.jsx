@@ -25,7 +25,7 @@ const AnimatedEbookCard = ({ book, index }) => {
           <img 
             src={book.image} 
             alt={book.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full transition-transform duration-500 group-hover:scale-110 object-cover"
           />
           <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <Button 
