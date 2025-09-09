@@ -17,7 +17,7 @@ const PrintedBooksSection = () => {
         <div 
           ref={headerRef}
           className={`text-center mb-16 animate-on-scroll fade-in ${isHeaderVisible ? 'is-visible' : ''}`}>
-          <span className="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-pink-300">Libros Impresos</span>
+          <span className="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-pink-300">Libros</span>
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-br from-gray-900 to-pink-500 bg-clip-text text-transparent">Mis Libros Impresos en Amazon.com</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Adquiere contenido inspirador que transformará tu perspectiva y fortalecerá tu familia

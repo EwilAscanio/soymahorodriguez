@@ -58,7 +58,7 @@ const ContactSection = () => {
       
       toast({
         title: "¡Mensaje enviado! 💕",
-        description: "Te contactaré pronto para agendar tu sesión gratuita.",
+        description: "Te contactaré pronto para aclarar cualquier duda.",
       });
       
       // Reset form
