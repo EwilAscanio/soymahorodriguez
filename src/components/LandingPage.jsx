@@ -17,12 +17,14 @@ const LandingPage = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <ServicesSection />
-        <TestimonialsSection />
         <EbooksSection />
         <PrintedBooksSection />
-        <BlogSection />
         <ContactSection />
+        
+        {/* <TestimonialsSection />
+        <BlogSection />
+        <ServicesSection />
+       */}
       </main>
       <Footer />
     </div>

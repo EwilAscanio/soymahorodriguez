@@ -23,7 +23,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white pt-16 px-8 pb-8">
       <div className="max-w-screen-xl mx-auto">
         <div className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-12 mb-12">
             <div className="max-w-sm">
               <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent">soymahorodriguez</h3>
               <p className="text-lg font-semibold text-pink-300 mb-4">
@@ -41,17 +41,19 @@ const Footer = () => {
                 <ul className="flex flex-col gap-3">
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" })}>Inicio</button></li>
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}>Sobre Mí</button></li>
-                  <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>Servicios</button></li>
-                  <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth" })}>Testimonios</button></li>
+                 
+                  
+                 
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("ebooks")?.scrollIntoView({ behavior: "smooth" })}>Ebooks</button></li>
+                  
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("printed-books")?.scrollIntoView({ behavior: "smooth" })}>Libros</button></li>
-                  <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("blog")?.scrollIntoView({ behavior: "smooth" })}>Blogg</button></li>
+              
                   <li><button className="bg-transparent border-none text-gray-400 text-sm text-left cursor-pointer transition-colors duration-200 p-0 hover:text-pink-300" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>Contacto</button></li>
                 </ul>
                 
               </div>
               
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col">
                 <h4 className="text-lg font-semibold mb-6 text-white">Servicios</h4>
                 <ul className="flex flex-col gap-3">
                   <li><span className="text-gray-400 text-sm cursor-default">Coaching Individual</span></li>
@@ -59,7 +61,7 @@ const Footer = () => {
                   <li><span className="text-gray-400 text-sm cursor-default">Mentoría Empresarial</span></li>
                   <li><span className="text-gray-400 text-sm cursor-default">Llamada Gratuita</span></li>
                 </ul>
-              </div>
+              </div> */}
               
               <div className="flex flex-col">
                 <h4 className="text-lg font-semibold mb-6 text-white">Sígueme</h4>

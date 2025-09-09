@@ -11,7 +11,7 @@ const EbooksSection = () => {
   const [ctaRef, isCtaVisible] = useIntersectionObserver({ threshold: 0.2 });
 
   return (
-    <section id="ebooks" className="relative bg-white py-24 px-8">
+    <section id="ebooks" className="relative bg-pink-50 py-24 px-8">
       <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-[var(--gradient-soft)] to-transparent z-0" />
       <div className="relative max-w-screen-xl mx-auto z-10">
         <div 

@@ -25,11 +25,11 @@ const Header = () => {
   const navigationItems = [
     { name: "Inicio", id: "hero" },
     { name: "Sobre Mí", id: "about" },
-    { name: "Servicios", id: "services" },
-    { name: "Testimonios", id: "testimonials" },
+    //{ name: "Servicios", id: "services" },
+    //{ name: "Testimonios", id: "testimonials" },
     { name: "Ebooks", id: "ebooks" },
     { name: "Libros", id: "printed-books" },
-    { name: "Blog", id: "blog" },
+    //{ name: "Blog", id: "blog" },
     { name: "Contacto", id: "contact" }
   ];
 
@@ -54,12 +54,12 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <Button 
+          {/* <Button 
             onClick={() => scrollToSection("contact")}
             className="cta-button"
           >
             Agenda tu sesión
-          </Button>
+          </Button> */}
 
           {/* Mobile Menu Button */}
           <button

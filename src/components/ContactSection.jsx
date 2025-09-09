@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
-import { Mail, Phone, MapPin, Send, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Heart, PencilLine } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
 import { contactInfo } from "../mock";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
@@ -46,7 +46,7 @@ const ContactSection = () => {
     const templateParams = {
       name: formData.name,
       email: formData.email,
-      to_name: 'Maho Rodriguez', // Puedes cambiar esto
+      to_name: 'soymahorodriguez.com', // Puedes cambiar esto
       message: formData.message,
       phone: formData.phone,
     };
@@ -151,7 +151,10 @@ const ContactSection = () => {
             className={`relative animate-on-scroll slide-in-from-right ${isFormVisible ? 'is-visible' : ''}`}>
             <Card className="bg-white border border-pink-500/10 rounded-3xl shadow-sm">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-800 mb-2">Contactame</CardTitle>
+                <CardTitle className="text-2xl text-gray-800 mb-2">
+                  <PencilLine className="inline-block mr-2 text-pink-600" size={24} />
+                  
+                  Contactame</CardTitle>
                 <p className="text-gray-500 text-base m-0">
                   Cuéntame un poco sobre ti y tus objetivos
                 </p>
@@ -195,7 +198,7 @@ const ContactSection = () => {
                       <Input
                         id="phone"
                         name="phone"
-                        type="tel"
+                        type="text"
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="(0414) 123-4567"

@@ -21,34 +21,37 @@ const AnimatedServiceCard = ({ service, index }) => {
 
   return (
     <div ref={cardRef} className={`animate-on-scroll fade-in ${isCardVisible ? 'is-visible' : ''}`}>
-      <Card className="service-card">
-        <CardHeader className="service-header">
-          <div className="service-icon">
+      <Card className="bg-white border border-pink-100 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-2 relative">
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pink-400 to-rose-500"></div>
+        <CardHeader className="text-center p-8">
+          <div className="w-16 h-16 bg-gradient-to-br from-pink-50 to-rose-100 text-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6 border border-pink-200">
             <IconComponent size={32} />
           </div>
-          <CardTitle className="service-title">{service.title}</CardTitle>
-          <p className="service-description">{service.description}</p>
+          <CardTitle className="text-xl font-bold text-gray-800 mb-2">{service.title}</CardTitle>
+          <p className="text-sm text-gray-500">{service.description}</p>
         </CardHeader>
         
-        <CardContent className="service-content">
-          <div className="service-price">{service.price}</div>
+        <CardContent className="px-8 pb-8">
+          <div className="text-center mb-6">
+            <span className="text-3xl font-bold text-gray-800">{service.price}</span>
+          </div>
           
-          <ul className="service-features">
+          <ul className="space-y-3 mb-8">
             {service.features.map((feature, index) => (
-              <li key={index} className="service-feature">
-                <Check size={16} className="check-icon" />
-                <span>{feature}</span>
+              <li key={index} className="flex items-start">
+                <Check size={16} className="text-pink-500 mr-3 mt-1 flex-shrink-0" />
+                <span className="text-gray-600">{feature}</span>
               </li>
             ))}
           </ul>
           
           <Button 
             onClick={() => handleBookService(service.title)}
-            className="service-button"
+            className="w-full bg-pink-500 text-white hover:bg-pink-600 rounded-full py-6 text-base font-semibold transition-all duration-300 flex items-center justify-center gap-2"
             size="lg"
           >
             Reservar Sesión
-            <ArrowRight size={16} className="button-icon" />
+            <ArrowRight size={16} />
           </Button>
         </CardContent>
       </Card>
