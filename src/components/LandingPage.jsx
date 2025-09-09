@@ -5,6 +5,7 @@ import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 import TestimonialsSection from "./TestimonialsSection";
 import EbooksSection from "./EbooksSection";
+import PrintedBooksSection from "./PrintedBooksSection";
 import BlogSection from "./BlogSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
@@ -19,6 +20,7 @@ const LandingPage = () => {
         <ServicesSection />
         <TestimonialsSection />
         <EbooksSection />
+        <PrintedBooksSection />
         <BlogSection />
         <ContactSection />
       </main>

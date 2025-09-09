@@ -27,7 +27,8 @@ const Header = () => {
     { name: "Sobre Mí", id: "about" },
     { name: "Servicios", id: "services" },
     { name: "Testimonios", id: "testimonials" },
-    { name: "Libros", id: "ebooks" },
+    { name: "Ebooks", id: "ebooks" },
+    { name: "Libros", id: "printed-books" },
     { name: "Blog", id: "blog" },
     { name: "Contacto", id: "contact" }
   ];

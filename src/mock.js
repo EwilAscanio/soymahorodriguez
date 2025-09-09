@@ -124,7 +124,7 @@ export const ebooksData = [
   },
   {
     id: 2,
-    title: "Un Mundo de Aventuras Bíblicas",
+    title: "Un Mundo de Aventuras Bíblicas. Devocionales para Niños",
     description: "Devocionales infantiles que le brindarán a los pequeños de la casa una auténtica experiencia con Dios. Más que historias, este ebook te desafía a vivir con tus hijos momentos inolvidables.",
     category: "Familia & Niños",
     price: "$10 USD",

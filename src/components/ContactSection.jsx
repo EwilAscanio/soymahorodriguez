@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -35,11 +36,24 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Mock form submission
+
+    // --- Configuración de EmailJS ---
+    // Reemplaza con tus propios IDs de EmailJS
+    const serviceID = 'service_a96v7zl';
+    const templateID = 'template_j7hs76d';
+    const publicKey = 'z1oE1xyE07gj9BSWY';
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_name: 'Maho Rodriguez', // Puedes cambiar esto
+      message: formData.message,
+      phone: formData.phone,
+    };
+    // --------------------------------
+
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
       
       toast({
         title: "¡Mensaje enviado! 💕",
@@ -54,6 +68,7 @@ const ContactSection = () => {
         message: ""
       });
     } catch (error) {
+      console.error('Error al enviar el correo:', error);
       toast({
         title: "Error al enviar",
         description: "Por favor, intenta nuevamente o contáctame directamente.",

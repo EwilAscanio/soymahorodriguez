@@ -5,11 +5,12 @@ import { Badge } from "./ui/badge";
 import { Book, ShoppingCart, ExternalLink, Star, Download } from "lucide-react";
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
-const AnimatedEbookCard = ({ book, index }) => {
+const AnimatedPrintedBookCard = ({ book, index }) => {
   const [cardRef, isCardVisible] = useIntersectionObserver({ threshold: 0.1, delay: index * 150 });
 
   const handleBuyBook = (book) => {
     // Redirect to the Amazon link for the book
+    if (book.disabled) return;
     console.log(`Redirecting to Amazon for: ${book.title}`);
     window.open(book.amazonLink, '_blank');
   };
@@ -28,7 +29,7 @@ const AnimatedEbookCard = ({ book, index }) => {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <Button 
+            {/* <Button 
               onClick={() => handlePreview(book)}
               className="bg-white text-pink-600 border-2 border-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition-transform duration-200 hover:scale-105 hover:bg-pink-600 hover:text-white"
               size="sm"
@@ -36,7 +37,7 @@ const AnimatedEbookCard = ({ book, index }) => {
             >
               <Book size={16} />
               Vista Previa
-            </Button>
+            </Button> */}
           </div>
           {/* Se dedhabilita la categoria temporalmente, activar si se desea mostrar
           <Badge className="absolute top-4 right-4 bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] text-white border-none px-4 py-2 rounded-full text-xs font-semibold shadow-sm">
@@ -56,6 +57,11 @@ const AnimatedEbookCard = ({ book, index }) => {
           
           <div className="flex items-center justify-between flex-wrap gap-4">
             <span className="text-2xl font-extrabold text-pink-600">{book.price}</span>
+            {book.status === "Pronto Disponible" && (
+              <Badge variant="secondary" className="bg-yellow-100 text-yellow-700 border border-yellow-300 flex items-center gap-1 text-xs font-semibold">
+                Pronto Disponible
+              </Badge>
+            )}
             {book.price === "Gratuito" && (
               <Badge variant="secondary" className="bg-pink-100 text-pink-700 border border-pink-300 flex items-center gap-1 text-xs font-semibold">
                 <Download size={12} />
@@ -83,12 +89,22 @@ const AnimatedEbookCard = ({ book, index }) => {
           <div className="flex flex-col gap-3">
             <Button 
               onClick={() => handleBuyBook(book)}
-              className="group bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] text-white border-none px-6 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:-translate-y-0.5 hover:shadow-lg"
+              className={`group bg-[linear-gradient(135deg,_#F9A8D4_0%,_#EC4899_100%)] text-white border-none px-6 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:-translate-y-0.5 hover:shadow-lg ${book.disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
               size="lg"
+              disabled={book.disabled}
             >
-              <ShoppingCart size={16} />
-              {book.price === "Gratuito" ? "Descargar Gratis" : "Comprar en Amazon"}
-              <ExternalLink size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
+              {book.disabled ? (
+                <>
+                  <Book size={16} />
+                  Pronto Disponible
+                </>
+              ) : (
+                <>
+                  <ShoppingCart size={16} />
+                  {book.price === "Gratuito" ? "Descargar Gratis" : "Comprar en Amazon"}
+                  <ExternalLink size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
+                </>
+              )}
             </Button>
             
             {/* Boton de vista previa deshabilitado temporalmente 
@@ -108,4 +124,4 @@ const AnimatedEbookCard = ({ book, index }) => {
   );
 };
 
-export default AnimatedEbookCard;
+export default AnimatedPrintedBookCard;
