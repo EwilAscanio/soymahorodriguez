@@ -1,0 +1,1 @@
+export default function Brand() { return <span className="brand">Soy<span className="brand-script">Maho</span><span className="brand-surname">Rodríguez</span><span className="brand-heart" aria-hidden="true">♡</span></span>; }

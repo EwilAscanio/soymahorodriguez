@@ -1,0 +1,5 @@
+import { externalLinks } from '../data/navigation';
+import ActionLink from './ActionLink';
+import Icon from './Icon';
+import ReferenceArt from './ReferenceArt';
+export default function AdventuresBanner() { return <section id="aventuras" className="adventures-section"><div className="container"><div className="adventures-banner reveal"><div className="adventures-reference"><ReferenceArt region={[0, 1383, 267, 111]} alt="Personajes de Un Mundo de Aventuras: un niño con un libro, un león y un conejo" /></div><div className="adventures-copy"><p className="eyebrow">UN PROYECTO DE SOY MAHO RODRÍGUEZ</p><h2>Un Mundo de<br /> <span className="script">Aventuras</span><Icon name="sparkles" size={36} /></h2><p>Historias, personajes, canciones y aventuras creadas para llenar de imaginación el mundo de los más pequeños y acercarlos a valores y enseñanzas que puedan llevar consigo mientras crecen.</p><p>Un rincón donde aprender, cantar, imaginar y descubrir siempre puede convertirse en una nueva aventura.</p><ActionLink href={externalLinks.adventures || '#libros'}>Entrar a Un Mundo de Aventuras</ActionLink></div></div></div></section>; }

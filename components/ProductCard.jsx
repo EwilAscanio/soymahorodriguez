@@ -1,0 +1,3 @@
+import Image from 'next/image';
+import ActionLink from './ActionLink';
+export default function ProductCard({ product }) { return <article className="product-card"><div className="product-image"><Image src={product.image} alt={`Arte original del libro ${product.title}`} width={1254} height={1254} quality={90} loading="lazy" /></div><div className="product-body"><p className="eyebrow">{product.category}</p><h3>{product.title}</h3><p>{product.description}</p><ActionLink href={product.amazonUrl} className="button button-outline" icon="external" pending="El enlace de este libro en Amazon estará disponible pronto.">Ver en Amazon</ActionLink></div></article>; }

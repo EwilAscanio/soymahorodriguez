@@ -1,0 +1,3 @@
+import Icon from './Icon';
+const values = [['book', 'Recursos gratuitos', 'para tu crecimiento'], ['users', 'Historias', 'que inspiran'], ['lightbulb', 'Ideas prácticas', 'para tu día a día'], ['heart', 'Una comunidad', 'de mujeres con propósito']];
+export default function ValueStrip() { return <div className="value-strip"><div className="container grid grid-cols-2 lg:grid-cols-4">{values.map(([icon, title, text]) => <div className="value-item" key={title}><span className="icon-circle"><Icon name={icon} size={29} /></span><p><strong>{title}</strong><span>{text}</span></p></div>)}</div></div>; }

@@ -1,0 +1,1 @@
+export default function SectionHeading({ eyebrow, children, description, align = 'center' }) { return <div className={`section-heading ${align === 'left' ? 'heading-left' : ''}`}>{eyebrow && <p className="eyebrow">{eyebrow}</p>}<h2>{children}</h2>{description && <div className="section-description">{description}</div>}</div>; }

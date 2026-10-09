@@ -1,0 +1,11 @@
+'use client';
+import { useSyncExternalStore } from 'react';
+import Link from 'next/link';
+import { navigation, externalLinks } from '../data/navigation';
+import Brand from './Brand';
+import ActionLink from './ActionLink';
+const subscribeYear = () => () => {};
+const getYearSnapshot = () => new Date().getFullYear();
+const getServerYearSnapshot = () => '';
+
+export default function Footer() { const year = useSyncExternalStore(subscribeYear, getYearSnapshot, getServerYearSnapshot); return <footer id="pie" className="site-footer"><div className="container footer-grid"><div className="footer-brand"><Link href="/#inicio" aria-label="Soy Maho Rodríguez, volver al inicio"><Brand /></Link><p className="eyebrow">FE · PROPÓSITO · TRANSFORMACIÓN</p><p className="script">Crezcamos juntos ♡</p></div><nav aria-label="Explorar el sitio"><p className="footer-label">EXPLORA SOY MAHO</p><div className="footer-nav">{navigation.filter(item => item.label !== 'YouTube').map(item => <Link key={item.href} href={item.href}>{item.label === 'Recursos' ? 'Recursos gratuitos' : item.label}</Link>)}</div></nav><div className="footer-social"><p className="footer-label">SIGAMOS CONECTADOS</p><ActionLink href={externalLinks.instagram} className="social-link" icon="instagram" pending="El perfil de Instagram estará disponible pronto.">Instagram</ActionLink><ActionLink href={externalLinks.youtube} className="social-link" icon="youtube" pending="El canal de YouTube estará disponible pronto.">YouTube</ActionLink><ActionLink href={externalLinks.tiktok} className="social-link" icon="tiktok" pending="El perfil de TikTok estará disponible pronto.">TikTok</ActionLink><ActionLink href={externalLinks.whatsapp} className="social-link" icon="whatsapp" pending="El contacto por WhatsApp estará disponible pronto.">WhatsApp</ActionLink><ActionLink href={externalLinks.contact} className="social-link" icon="mail" pending="La información de contacto estará disponible pronto.">Contacto</ActionLink><p className="footer-domain">soymahorodriguez.com</p></div></div><div className="container footer-bottom"><p>© {year} Soy Maho Rodríguez. Todos los derechos reservados.</p><ActionLink href={externalLinks.developer} className="footer-dev-link" icon={null}>Desarrollado por: ewilascanio.com</ActionLink></div></footer>; }
