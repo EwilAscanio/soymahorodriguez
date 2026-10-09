@@ -70,6 +70,13 @@ section, article[id] { scroll-margin-top: 86px; }
 .hero-heart { position: absolute; right: -5px; top: 110px; color: #ea6394; transform: rotate(15deg); }
 .hero-note { position: absolute; right: -5px; top: 85px; color: #7c5794; font-family: 'Caveat', cursive; font-size: 26px; line-height: 1.2; transform: rotate(-7deg); text-shadow: 0 0 15px white; }
 .hero-heart { right: 0; top: 300px; }
+@keyframes hero-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.hero-copy > * { animation: hero-in .7s cubic-bezier(.2,.7,.2,1) both; }
+.hero-copy > *:nth-child(1) { animation-delay: .05s; }
+.hero-copy > *:nth-child(2) { animation-delay: .18s; }
+.hero-copy > *:nth-child(3) { animation-delay: .30s; }
+.hero-copy > *:nth-child(4) { animation-delay: .42s; }
+.hero-visual { animation: hero-in .85s cubic-bezier(.2,.7,.2,1) .12s both; }
 .value-strip { padding-block: 28px; background: #fffdfc; border-bottom: 1px solid #f9edf2; }
 .novela-section { position: relative; overflow: clip; background: #fffafc; }
 .novela-banner { width: 100%; height: auto; border-radius: 22px; box-shadow: 0 18px 45px #f3c6db33; }

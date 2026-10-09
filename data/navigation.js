@@ -4,7 +4,6 @@ export const navigation = [
   { label: 'Recursos Gratuitos', href: '/#recursos' },
   { label: 'Libros', href: '/#libros' },
   { label: 'Sobre mí', href: '/#sobre-mi' },
-  { label: 'Blog', href: '/blog' },
 ];
 
 // PLACEHOLDER: replace only with verified contact and social URLs.
