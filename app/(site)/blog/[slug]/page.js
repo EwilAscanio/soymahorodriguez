@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { generateHTML } from "@tiptap/html";
 import { getArticleBySlug, formatDate } from "../../../../lib/blog";
 import { editorExtensions } from "../../../../lib/tiptap";
 import ViewTracker from "../../../../components/ViewTracker";
 
 import { connection } from "next/server";
+
+const SITE_URL = "https://www.soymahorodriguez.com";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -14,11 +17,22 @@ export async function generateMetadata({ params }) {
   return {
     title: article.title,
     description: article.excerpt ?? undefined,
+    alternates: { canonical: `/blog/${article.slug}` },
     openGraph: {
       title: article.title,
       description: article.excerpt ?? undefined,
       type: "article",
+      url: `${SITE_URL}/blog/${article.slug}`,
       publishedTime: article.published_at?.toISOString(),
+      images: article.cover_image
+        ? [{ url: article.cover_image, alt: article.title }]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt ?? undefined,
+      images: article.cover_image ? [article.cover_image] : undefined,
     },
   };
 }
@@ -59,11 +73,16 @@ function ArticleContent({ article }) {
         </header>
 
         {article.cover_image && (
-          <img
-            src={article.cover_image}
-            alt=""
-            className="mb-10 aspect-[16/9] w-full rounded-2xl border border-border object-cover"
-          />
+          <div className="relative mb-10 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">
+            <Image
+              src={article.cover_image}
+              alt={article.title}
+              fill
+              unoptimized
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+            />
+          </div>
         )}
 
         {article.excerpt && (
@@ -73,6 +92,37 @@ function ArticleContent({ article }) {
         <div
           className="article-body"
           dangerouslySetInnerHTML={{ __html: html }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: article.title,
+              description: article.excerpt ?? undefined,
+              image: article.cover_image ?? undefined,
+              datePublished: article.published_at?.toISOString(),
+              dateModified: article.published_at?.toISOString(),
+              author: article.author_name
+                ? { "@type": "Person", name: article.author_name }
+                : undefined,
+              publisher: {
+                "@type": "Organization",
+                name: "Soy Maho Rodríguez",
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${SITE_URL}/favicon.ico`,
+                },
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${SITE_URL}/blog/${article.slug}`,
+              },
+              inLanguage: "es",
+            }),
+          }}
         />
       </article>
     </main>

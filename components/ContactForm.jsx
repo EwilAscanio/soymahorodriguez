@@ -65,10 +65,10 @@ function ContactFormBody() {
         emailjsConfig.serviceID,
         emailjsConfig.templateID,
         {
-          nombre: values.nombre,
-          correo: values.correo,
-          telefono: values.telefono,
-          mensaje: values.mensaje,
+          name: values.nombre,
+          email: values.correo,
+          phone: values.telefono,
+          message: values.mensaje,
         },
         { publicKey: emailjsConfig.publicKey }
       );

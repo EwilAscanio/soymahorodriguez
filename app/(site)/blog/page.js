@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   countPublishedArticles,
   formatDate,
@@ -8,6 +9,13 @@ import {
 } from "../../../lib/blog";
 
 const PAGE_SIZE = 9;
+
+export const metadata = {
+  title: "Blog",
+  description:
+    "Historias, ideas y recursos para vivir, enseñar y compartir la fe en familia.",
+  alternates: { canonical: "/blog" },
+};
 
 function categoryHref(category, page = 1) {
   const base = category ? `/blog?categoria=${encodeURIComponent(category)}` : "/blog";
@@ -76,16 +84,18 @@ async function BlogListContent({ searchParams }) {
               >
                 <Link
                   href={`/blog/${article.slug}`}
-                  className="block aspect-[16/10] overflow-hidden bg-cream"
+                  className="relative block aspect-[16/10] overflow-hidden bg-cream"
                   aria-hidden="true"
                   tabIndex={-1}
                 >
                   {article.cover_image && (
-                    <img
+                    <Image
                       src={article.cover_image}
                       alt=""
-                      className="h-full w-full object-cover"
-                      loading="lazy"
+                      fill
+                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
                     />
                   )}
                 </Link>

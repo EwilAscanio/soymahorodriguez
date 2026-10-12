@@ -4,6 +4,10 @@ import { requireUser } from "../../lib/session";
 import AdminNav from "../../components/admin/AdminNav";
 import LogoutButton from "../../components/admin/LogoutButton";
 
+export const metadata = {
+  robots: { index: false, follow: false },
+};
+
 async function Sidebar() {
   const user = await requireUser();
   return (
