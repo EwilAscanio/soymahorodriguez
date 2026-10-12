@@ -1,0 +1,55 @@
+/* Ajusta aquí la posición y el tamaño del botón en cada pantalla. */
+.novela-banner-link {
+  color: inherit;
+}
+
+.button.novela-banner-button {
+  z-index: 1;
+  position: absolute;
+  right: 250px;
+  bottom: 30px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #000;
+  transition: transform .2s ease;
+}
+
+.button.novela-banner-button:hover {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: scale(1.08);
+}
+
+@media (max-width: 1023px) {
+  .button.novela-banner-button {
+    right: clamp(10px, 4vw, 48px);
+    bottom: 10px;
+    min-height: 34px;
+    padding: 6px 12px;
+    gap: 6px;
+    font-size: 9px;
+  }
+
+  .button.novela-banner-button svg {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button.novela-banner-button {
+    right: 110px;
+    bottom: 12px;
+    min-height: 8px;
+    padding: 5px 9px;
+    gap: 2px;
+    font-size: 8px;
+  }
+
+  .button.novela-banner-button svg {
+    width: 5px;
+    height: 5px;
+  }
+}

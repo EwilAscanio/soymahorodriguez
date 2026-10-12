@@ -1,32 +1,27 @@
 'use client';
-import { useState } from 'react';
 import Image from 'next/image';
 import { assets } from '../data/assets';
 import { externalLinks } from '../data/navigation';
-import ActionLink from './ActionLink';
 import Decorations from './Decorations';
-
-const buttonPosition = { right: '250px', bottom: '30px' };
+import './NovelaBanner.css';
 
 export default function NovelaBanner() {
-  const [hover, setHover] = useState(false);
   return (
     <section id="novela" className="novela-section section-pad">
       <Decorations />
       <div className="container reveal">
-        <div className="novela-banner-wrap" style={{ position: 'relative', display: 'block' }}>
+        <a
+          className="novela-banner-wrap novela-banner-link"
+          href={externalLinks.novela}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Comprar el libro Más allá de las fronteras"
+        >
           <Image src={assets.banner} alt="Banner de la novela" width={2171} height={724} quality={90} loading="lazy" className="novela-banner" />
-          <ActionLink
-            href={externalLinks.novela}
-            className="button button-ghost novela-banner-button"
-            icon="external"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            style={{ ...buttonPosition, position: 'absolute', zIndex: 1, color: '#000', borderColor: '#000', transform: hover ? 'scale(1.08)' : 'scale(1)', transition: 'transform .2s ease' }}
-          >
+          <span className="button novela-banner-button">
             Comprar el libro
-          </ActionLink>
-        </div>
+          </span>
+        </a>
       </div>
     </section>
   );
