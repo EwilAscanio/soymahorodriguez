@@ -7,5 +7,5 @@ export const navigation = [
 ];
 
 // PLACEHOLDER: replace only with verified contact and social URLs.
-export const externalLinks = { instagram: 'https://www.instagram.com/soymahorodriguez/', youtube: 'https://www.youtube.com/@SoyMahoRodr%C3%ADguez', tiktok: 'https://www.tiktok.com/@soymahorodriguez', contact: null, adventures: null, novela: 'https://www.amazon.com/dp/B0HKYW2X81', whatsapp: 'https://wa.me/584244053277', developer: 'https://ewilascanio.com' };
+export const externalLinks = { instagram: 'https://www.instagram.com/soymahorodriguez/', youtube: 'https://www.youtube.com/@SoyMahoRodr%C3%ADguez', tiktok: 'https://www.tiktok.com/@soymahorodriguez', contact: null, adventures: null, novela: 'https://www.amazon.com/dp/B0HKYW2X81', consejos: 'https://www.amazon.com/-/es/gp/product/B0HDKGL233/ref=ox_sc_act_title_9?smid=ATVPDKIKX0DER&psc=1', whatsapp: 'https://wa.me/584244053277', developer: 'https://ewilascanio.com' };
 

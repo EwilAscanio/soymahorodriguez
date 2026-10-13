@@ -8,9 +8,11 @@ import advice from '../public/assets/book-21-consejos.webp';
 import borders from '../public/assets/book-fronteras.webp';
 import bible from '../public/assets/book-aventuras-biblicas.webp';
 import tales from '../public/assets/book-cuentos.webp';
-import banner from '../public/assets/banner-masalla.png';
+import bannerNovela from '../public/assets/banner-masalla.webp';
+import bannerConsejos from '../public/assets/banner-21consejos.webp';
+import bannerRecursos from '../public/assets/banner-recursosnav.webp';
 
-export const assets = { log, desk, cutout, portrait, family, heading, advice, borders, bible, tales, banner };
+export const assets = { log, desk, cutout, portrait, family, heading, advice, borders, bible, tales, bannerNovela, bannerConsejos, bannerRecursos };
 
 
 

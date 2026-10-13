@@ -78,9 +78,6 @@ section, article[id] { scroll-margin-top: 86px; }
 .hero-copy > *:nth-child(4) { animation-delay: .42s; }
 .hero-visual { animation: hero-in .85s cubic-bezier(.2,.7,.2,1) .12s both; }
 .value-strip { padding-block: 28px; background: #fffdfc; border-bottom: 1px solid #f9edf2; }
-.novela-section { position: relative; overflow: clip; background: #fffafc; }
-.novela-banner { width: 100%; height: auto; border-radius: 22px; box-shadow: 0 18px 45px #f3c6db33; }
-.novela-banner-wrap { display: block; position: relative; }
 .button-ghost { background: transparent; color: #000; border-color: #000; }
 .button-ghost:hover { background: transparent; border-color: #000; transform: scale(1.08); box-shadow: none; }
 .value-item { display: flex; align-items: center; gap: 18px; padding-inline: 22px; border-right: 1px solid var(--border); }
