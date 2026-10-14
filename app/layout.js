@@ -1,4 +1,5 @@
 import { DM_Sans, DM_Serif_Display, Caveat } from "next/font/google";
+import Script from "next/script";
 import { externalLinks } from "../data/navigation";
 import "./globals.css";
 
@@ -40,9 +41,16 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@soymahorodriguez",
+    creator: "@soymahorodriguez",
     title: "Soy Maho Rodríguez | Fe, Propósito y Transformación",
     description:
       "Historias, recursos, libros e ideas creativas para vivir, enseñar y compartir la fe en familia.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { "max-image-preview": "large", "max-snippet": -1 },
   },
 };
 
@@ -72,6 +80,26 @@ export default function RootLayout({ children }) {
       className={`${dmSans.variable} ${dmSerif.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {/* Google Tag Manager — código de Google Analytics (GTM-5KQMTD4W) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5KQMTD4W"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <Script
+          id="google-analytics-gtm"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5KQMTD4W');`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}

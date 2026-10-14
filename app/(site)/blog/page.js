@@ -15,6 +15,19 @@ export const metadata = {
   description:
     "Historias, ideas y recursos para vivir, enseñar y compartir la fe en familia.",
   alternates: { canonical: "/blog" },
+  openGraph: {
+    type: "website",
+    title: "Blog | Soy Maho Rodríguez",
+    description:
+      "Historias, ideas y recursos para vivir, enseñar y compartir la fe en familia.",
+    url: "/blog",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Soy Maho Rodríguez",
+    description:
+      "Historias, ideas y recursos para vivir, enseñar y compartir la fe en familia.",
+  },
 };
 
 function categoryHref(category, page = 1) {
